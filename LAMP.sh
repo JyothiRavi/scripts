@@ -88,7 +88,7 @@ case "$choice" in
                                 echo -e "$Purple \n Select the version which you want to install $Color_Off"
                                 while true; do
                                 echo -e "$Yellow \n 1.Mysql 5.6 $Color_Off "
-                                echo -e "$Yellow \n 2.Mysql 7.0 $Color_Off "
+                                echo -e "$Yellow \n 2.Mysql 5.7 $Color_Off "
 								echo -e "$Yellow \n Enter your choice, or Press 0 for Main Menu "
                                 read version
                                  case "$version" in
