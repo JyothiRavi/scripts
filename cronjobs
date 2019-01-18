@@ -1,0 +1,7 @@
+# First read the daily_backup.sh file then only you will come to know what is happening.
+#This cron create a backup at 11 pm IST
+00 23 * * * /data/scripts/daily_backup.sh
+# copies the backups which are created into s3 bucket.  
+30 23 * * * /usr/bin/aws s3 cp --region ap-south-1 /data/backups/daily s3://bucket-name/daily --recursive
+#Deleting the backups from the server 
+45 23 * * * rm -rf /data/backups/daily/www/*
